@@ -28,5 +28,18 @@ function loadEmailAddressesCompobox() {
     
     
 }
+
+function loadnEmailAddressesCompoboxusingnewlibs() {
+    const emailaddreslists = tById("emailaddreslistsnew");
+    emailaddreslists.innerHTML=''
+    emaillists.forEach(data => {
+        var option = document.createElement('option');
+        option.value = data.Email;
+        option.innerText = data.Fullname;
+        emailaddreslists.appendChild(option);
+    });
+    
+    
+}
 loadEmailAddresses()
 loadEmailAddressesCompobox()
