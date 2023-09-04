@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="dist/css/cocacola-theme.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 
@@ -40,7 +41,7 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="index.html" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a hhref="#"  class="nav-link">New</a>
@@ -61,17 +62,22 @@
       <!-- Navbar Search -->
     
 
-     
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-trash"></i>
+        <div class="containerd">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+              <i class="fas fa-th text-light"></i> 
+            </a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <div class="containerd">
+            <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
+            role="button">
+            <i class="fas fa-search  text-light"></i>
         </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-      </li>
+        </div>
+       
+    </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -100,7 +106,7 @@
           
           
           <li class="nav-item">
-            <a href="home.html" class="nav-link">
+            <a href="index.html" class="nav-link">
               <p>
                 Home
               </p>
@@ -123,7 +129,7 @@
           </li>
           
           <li class="nav-item">
-           <a href="approval.html" class="nav-link">
+           <a href="approval.html" class="nav-link active">
               <p>
                 Approvals
               </p>
@@ -132,13 +138,22 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="otherrequstform.html" class="nav-link">
               <p>
                 Others
               </p>
             </a>
             
           </li>
+
+          <li class="nav-item">
+            <a href="emails.html" class="nav-link">
+                <p>
+                    E-mail
+                </p>
+            </a>
+
+        </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -263,6 +278,6 @@
 <!-- <script src="dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
-
+<script src="dist/js/telthemweb.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cocacola | Dashboard</title>
+    <title>Cocacola | Disposal of Assets</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="dist/css/cocacola-theme.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -66,22 +67,27 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                        <i class="fas fa-trash"></i>
-                    </a>
+                    <div class="containerd">
+                        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                            <i class="fas fa-th text-light"></i>
+                        </a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
-                        role="button">
-                        <i class="fas fa-search"></i>
-                    </a>
+                    <div class="containerd">
+                        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
+                            role="button">
+                            <i class="fas fa-search  text-light"></i>
+                        </a>
+                    </div>
+
                 </li>
             </ul>
         </nav>
         <!-- /.navbar -->
-        <!-- Navbar -->
 
-        <!-- /.navbar -->
+
+
 
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-light-primary elevation-4">
@@ -106,7 +112,7 @@
 
 
                         <li class="nav-item">
-                            <a href="home.html" class="nav-link">
+                            <a href="index.html" class="nav-link">
                                 <p>
                                     Home
                                 </p>
@@ -138,9 +144,18 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="otherrequstform.html" class="nav-link">
                                 <p>
                                     Others
+                                </p>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="emails.html" class="nav-link">
+                                <p>
+                                    E-mail
                                 </p>
                             </a>
 
@@ -165,26 +180,15 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <div class="card  p-lg-5">
-                <div class="card-body p-lg-5">
+        <div class="content-wrapper ">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Disposal of assets</h4>
+                </div>
+                <div class="card-body  p-lg-5">
                     <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Local Reference Number/Request Title</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                         <!-- ./col -->
-                        <div class="col-lg-6 col-8">
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -198,26 +202,50 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- ./col -->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
-                                    <label>Country</label>
+                                    <label>Disposal Type</label>
                                     <select class="form-control" aria-label="Default select example">
                                         <option selected>Find Item</option>
-                                        <option value="1">South Africa</option>
-                                        <option value="2">Zimbabwe</option>
-                                        <option value="3">Botswana</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
+
+                                    <label>Local Ref No.</label>
+                                    <select class="form-control" aria-label="Default select example">
+                                        <option selected>Find Item</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- ./col -->
-                        <div class="col-lg-6 col-8">
+                    </div>
+
+
+                    <div class="row">
+                        <!-- ./col -->
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <!--load data from js-->
+                                <div class="rounded" id="countries"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -232,10 +260,8 @@
                             </div>
                         </div>
 
-                        <!-- ./col -->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
+
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -249,8 +275,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- ./col -->
-                        <div class="col-lg-6 col-8">
+                    </div>
+
+                    <div class="row">
+                        <!-- ./col -->
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -264,11 +295,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- ./col -->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -282,8 +309,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
+
+
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -300,78 +328,10 @@
 
                         <!-- ./col -->
                     </div>
+
                     <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Budget Period</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                         <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>IM/WBS/Project Number</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
-                    <div class="row mb-lg-5">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Anticipated Capitalisation Date</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Type of Request</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
-
-
-
-                    <h2>Total of Requests</h2>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
@@ -385,213 +345,134 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-
-
-                            <div class="form-check form-switch mt-lg-4">
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Was any asset purchased through OPEX
-                                    instead of CAPEX?</label><br>
-
-                            </div>
-
-
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-
-
-                            <div class="form-check form-switch">
-                                <label class="form-check-label" for="flexCheck">Asset Replacement</label><br>
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Yes</label>
-
-                            </div>
-
-
-                        </div>
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Asset Description</label>
-                                    <textarea type="text" name="assetdescription" class="form-control">
-                                        This is description
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        
-
-                        <!-- ./col -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Motivation</label>
-                                    <textarea type="text" name="assetdescription" class="form-control">
-                                        This is description
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Available to Spend</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Budget Amount</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Total Amount for the Request</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-group">
-                                <div class="rounded">
-
-                                    <label>Budget Remaining</label>
-                                    <select class="form-control" aria-label="Default select example">
-                                        <option selected>Find Item</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
                                     <label>Attach Supporting Document/Quotation</label>
                                     <input type="file" class="form-control">
+                                    <small>50 MB (Maximum)</small>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- ./col -->
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-check form-switch mt-lg-4">
-                                <label class="form-check-label" for="flexCheck">I have attached supporting document in compliance with my country's procurement policy where relevant</label><br>
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Yes</label>
-
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-
-
+                        <div class="col-md-4 col-lg-4 col-sx-12">
                             <div class="form-group">
                                 <div class="rounded">
 
-                                    <label>Please motivate reason for deviation from policy</label>
-                                    <textarea type="text" name="assetdescription" class="form-control">
-                                        reason
-                                    </textarea>
+                                    <label>Type of Disposal</label>
+                                    <select class="form-control" aria-label="Default select example">
+                                        <option selected>Find Item</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
                                 </div>
                             </div>
-
-
                         </div>
 
                         <!-- ./col -->
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-check form-switch mt-lg-4">
-                                <label class="form-check-label" for="flexCheck">Capture Detailed Cost?</label><br>
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Yes</label>
 
-                            </div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-lg-6 col-8">
-                            <div class="form-check form-switch mt-lg-4">
-                                <label class="form-check-label" for="flexCheck">CaptureProject Evaluation Details?</label><br>
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Yes</label>
-
-                            </div>
-                        </div>
-
-                        <!-- ./col -->
-                    </div>
 
                     <div class="row">
-                        <div class="col-lg-6 col-8">
-                            <div class="form-check form-switch mt-lg-4">
-                                <label class="form-check-label" for="flexCheck">Capture Business Case financials</label><br>
-                                <input type="checkbox" name="dswitch" class="form-check-input">
-                                <label class="form-check-label" for="flexCheck">Yes</label>
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
 
+                                    <label>Multiple Assets</label>
+                                    <select class="form-control" aria-label="Default select example">
+                                        <option selected>Find Item</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        
+                        <!-- ./col -->
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
+
+                                    <label>Asset Number</label>
+                                    <input type="text" class="form-control" placeholder="Asset Number">
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- ./col -->
                     </div>
+
+
+
+
+                    <hr style="border-bottom: 2px solid rgb(32, 17, 17);" class="mb-lg-5">
+
+                   
+
+
+
+                    
+
+
+
+                    <h2>Total of Requests <span class="float-right"><b>0.00</b></span></h2>
+                    <div class="row">
+                        <!-- ./col -->
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
+
+                                    <label>Motivation</label>
+                                    <input type="text" name="assetdescription" class="form-control" placeholder="This is Motivation">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
+
+                                    <label>Will there be proceeds</label>
+                                    <select class="form-control" aria-label="Default select example">
+                                        <option selected>Find Item</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4 col-lg-4 col-sx-12">
+                            <div class="form-group">
+                                <div class="rounded">
+
+                                    <label>Assets Disposed to</label>
+                                    <select class="form-control" aria-label="Default select example">
+                                        <option selected>Find Item</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ./col -->
+                    </div>
+                  
+
+
+
                     <div class="row">
                         <div class="col-12">
-                            <button class="btn btn-danger px-4 ml-3 float-right" type="submit"><i class="fa fa-save"></i> Save Form</button>
-                            <button class="btn btn-danger px-4 float-right" type="submit"><i class="fa fa-cloud"></i> Submit Form</button>
+                            <button class="btn btn-danger px-4 ml-3 float-right" type="submit"><i
+                                    class="fa fa-save"></i> Save Form</button>
+                            <button class="btn btn-danger px-4 float-right" type="submit"><i class="fa fa-cloud"></i>
+                                Submit Form</button>
                         </div>
                     </div>
                 </div>
@@ -648,6 +529,9 @@
         $("[name='dswitch']").bootstrapSwitch();
     </script>
 
+    <script src="dist/js/telthemweb.js"></script>
+    <script src="dist/js/coca_theme.js"></script>
+    <script src="dist/js/country.js"></script>
 </body>
 
 </html>
