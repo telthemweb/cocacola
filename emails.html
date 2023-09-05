@@ -113,7 +113,7 @@
 
 
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">
+                            <a href="home.html" class="nav-link">
                                 <p>
                                     Home
                                 </p>
@@ -145,7 +145,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="otherrequstform.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <p>
                                     Others
                                 </p>
@@ -208,19 +208,19 @@
                                     </span></div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                    <table id="table" data-toggle="table">
-                                        <thead class="bg-dark">
-                                            <tr>
-                                                <th scope="col"><input type="checkbox"></th>
-                                                <th scope="col">Fullname</th>
-                                                <th scope="col">E-mail</th>
-                                                <th scope="col">Telephone</th>
-                                                <th scope="col">Mobile</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tablecontainer"> </tbody>
-                                    </table>
+                                        <table id="table" data-toggle="table">
+                                            <thead class="bg-dark">
+                                                <tr>
+                                                    <th scope="col"><input type="checkbox"></th>
+                                                    <th scope="col">Fullname</th>
+                                                    <th scope="col">E-mail</th>
+                                                    <th scope="col">Telephone</th>
+                                                    <th scope="col">Mobile</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tablecontainer"> </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -279,11 +279,11 @@
     <script>
         $(document).ready(function () {
             $("#emailaddreslistsnew").on("change", function () {
-                var selectedNames =  $(this).val() || [];
-                
+                var selectedNames = $(this).val() || [];
+
                 $("#table").bootstrapTable("filterBy", function (row) {
-                    console.log(row.E-mail)
-                     return selectedNames.length === 0 || selectedNames.includes(row.E-mail);
+                    console.log(row.E - mail)
+                    return selectedNames.length === 0 || selectedNames.includes(row.E - mail);
                 })
             });
         });
