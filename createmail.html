@@ -200,28 +200,28 @@
                                 </div>
                                 <div class="card-body">
                                     <form action="">
-                                        <div class="row mb-lg-2">
+                                        <div class="row mb-lg-2" >
                                             <div class="col-md-2">
                                                 <h5>To</h5>
                                             </div>
                                             <div class="col-md-6">
-                                                    
-                                                    <select class="form-control mb-4" aria-label="Default select example" multiple  id="emailaddreslists" placeholder="To">
+                                                 <div id="maincontainer">
+                                                    <select class="form-control mb-4 rounded" onchange="loadcc()" aria-label="Default select example" multiple  id="emailaddreslists" placeholder="To">
                                                         <option value="thembamukwa@gmail.com">Themba Mukwa</option>
                                                         <option value="itauzeni@gmail.com">Innocent Tauzeni</option>
                                                         <option value="gtauzeni@gmail.com">George Tauzeni</option>
                                                         <option value="atauzeni@gmail.com">Arthur Tauzeni</option>
                                                     </select>
-                                               
+                                                 </div>
                                             </div>
-                                            <div class="col-md-2">
+                                            <!-- <div class="col-md-2">
                                                 <div class="datap mt-2">
                                                     <span
-                                                        class="fas fa-plus-circle text-success"></span>
+                                                        class="fas fa-plus-circle text-success" onclick="addnewinputformhorizontally()"></span>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
-                                        <div class="row mb-lg-2">
+                                        <div class="row mb-lg-2" id="inputcc">
                                             <div class="col-md-2">
                                                 <h5>Cc</h5>
                                             </div>
@@ -233,14 +233,9 @@
                                                         <option value="atauzeni@gmail.com">Arthur Tauzeni</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-2">
-                                                <div class="datap mt-2">
-                                                    <span
-                                                        class="fas fa-plus-circle text-success"></span>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
-                                        <div class="row mb-lg-2">
+                                        <div class="row mb-lg-2" id="inputtemplate">
                                             <div class="col-md-2">
                                                 <h5>Template</h5>
                                             </div>

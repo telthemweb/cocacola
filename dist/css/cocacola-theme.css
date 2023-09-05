@@ -8,7 +8,9 @@
 .active{
     background-color: #ff0000!important;
 }
-
+/* #inputtemplate,#inputcc{
+  display: none;
+} */
 /* @media (max-width: 308px) {
     table.table-responsive {
       table-layout: fixed !important;

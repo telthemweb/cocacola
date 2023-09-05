@@ -18,28 +18,38 @@ function loadEmailAddresses() {
 
 function loadEmailAddressesCompobox() {
     const emailaddreslists = tById("emailaddreslists");
-    emailaddreslists.innerHTML=''
+    emailaddreslists.innerHTML = ''
     emaillists.forEach(data => {
         var option = document.createElement('option');
         option.value = data.Email;
         option.innerText = data.Fullname;
         emailaddreslists.appendChild(option);
     });
-    
-    
+
+
 }
 
 function loadnEmailAddressesCompoboxusingnewlibs() {
     const emailaddreslists = tById("emailaddreslistsnew");
-    emailaddreslists.innerHTML=''
+    emailaddreslists.innerHTML = ''
     emaillists.forEach(data => {
         var option = document.createElement('option');
         option.value = data.Email;
         option.innerText = data.Fullname;
         emailaddreslists.appendChild(option);
     });
-    
-    
+
+
 }
+
+function loadcc() {
+    var inputcc=tById('inputcc')
+    var inputtemplate=tById('inputtemplate')
+
+    inputcc.style.display = "block"
+    inputtemplate.style.display = "block"
+}
+
+
 loadEmailAddresses()
 loadEmailAddressesCompobox()
